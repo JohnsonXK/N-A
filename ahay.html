@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(270deg, #ffdd00, #00ff00, #0000ff);
+            background-size: 600% 600%;
+            animation: gradientAnimation 16s ease infinite;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            background: linear-gradient(135deg, #ffefba, #ffffff);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            animation: gradientAnimationContent 16s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientAnimationContent {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px 0 20px;
+            width: calc(100% - 22px); /* Adjust width to include padding and borders */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password === "846143") {
+                window.location.href = "https://free.facebook.com/privacy/touch/unblock/write/?unblock_id=100076773334867&redirect_uri&eav=Afb7GAcRgF6DFeVf9Lqnn6c8np0zC59ekOMd5cb6Nr2ahDmCtdV2XXzwjfbN4mjgx38&gfid=AQDeD_HPQ_OrJSqIIsw&paipv=0";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter The Code</h1>
+        <p>Sometimes, Johnson just sent some random codes when he wants to say something...</p>
+        <p>It can be found in the messages or gc or what ever.</p>
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+</body>
+</html>
